@@ -8,6 +8,7 @@ public class Morte : MonoBehaviour
     public GameObject implosion;
     public int life = 1;
     public GameObject SpawnPoint;
+    public int DeathCount = 0;
     private void OnParticleCollision(GameObject other)
     {
         life--;
@@ -18,6 +19,7 @@ public class Morte : MonoBehaviour
             //Destroy(gameObject);//
             if(SpawnPoint){
                 transform.position=SpawnPoint.transform.position;
+                DeathCount = DeathCount + 1;
             }else{
                 Destroy(gameObject);
             }

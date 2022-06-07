@@ -19,12 +19,12 @@ public class PortalCode : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             
-        SceneManager.LoadScene("Fase2");
+        SceneManager.LoadScene("Nivel2");
             
         }
 
