@@ -23,6 +23,16 @@ public class MovePlayer : MonoBehaviour
             rdb.velocity = rdb.velocity + new Vector2(0, jumpforce);
             jumpforce = jumpforce - 0.1f;
         }
+
+        if (newvel.x > 0)
+            {
+                transform.localRotation = Quaternion.Euler(0,0,0);
+            }
+        if (newvel.x < 0)
+            {
+                transform.localRotation = Quaternion.Euler(0,180,0);
+            }
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
